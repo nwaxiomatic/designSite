@@ -1,0 +1,42 @@
+html {
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+@font-face {
+  font-family: 'YiBati';
+  src: url('Microsoft-Yi-Baiti.woff')  format('woff'); /* Safari, Android, iOS */
+}
+body {
+  font-family: 'YiBati';
+  padding-bottom: 8rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.inner {
+
+  align-self: center;
+  padding: 2rem;
+}
+
+
+h1 {
+  font-family: 'YiBati';
+}
+
+.title {
+  font-family: 'YiBati';
+}
+
+p {
+  font-family: 'YiBati';
+
+}

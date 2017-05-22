@@ -1,0 +1,11 @@
+
+
+
+@font-face {
+  font-family: 'YiBati';
+  src: url('Microsoft-Yi-Baiti.woff')  format('opentype'); /* Safari, Android, iOS */
+}
+
+p {
+  font-family: "YiBati";
+}
