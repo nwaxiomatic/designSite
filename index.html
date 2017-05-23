@@ -45,15 +45,11 @@
 
   <div class="container">
 
-
-
-<div>
-
 </div>
 
       <div class="six columns wrap" style= "position: fixed; z-index: -20;">
         <div class="ten columns offset-by-two columns inner">
-          <img id="slideshow" style="max-width: 100%;" src="PortfolioSamples/jug.jpg" />
+          <img id="slideshow" style="max-width: 100%;" src="./img/PortfolioSamples/jugs.jpg" />
         </div>
       </div>
 
@@ -178,7 +174,7 @@
   </script>
 
 
-<script src="PortfolioSamples/getimages.php"></script>
+<script src="./img/getimages.php"></script>
 
 
 
@@ -189,21 +185,20 @@ var refreshIntervalId = null;
 
 
 function rotateimages(){
-  document.getElementById("slideshow").setAttribute("src", imgFolder + "/" + galleryarray[curimg]);
-  curimg=(curimg<galleryarray.length-1)? curimg+1 : 0;
+  document.getElementById("slideshow").setAttribute("src", "./img/" + imgFolder + "/" + galleryarray[imgFolder][curimg]);
+  curimg ++;
+  curimg %= galleryarray[imgFolder].length;
 }
 
 rotateimages();
-refreshIntervalId = setInterval(rotateimages, 2500);
+refreshIntervalId = setInterval(rotateimages, 500);
 
 $('.slideshow-button').hover(function(){
 	imgFolder = this.getAttribute("folder");
-  galleryarray = returnimages(imgFolder);
-  document.getElementById("folder-name").innerHTML = imgFolder;
   curimg = 0;
   rotateimages();
   clearInterval(refreshIntervalId);
-  refreshIntervalId = setInterval(rotateimages, 2500);
+  refreshIntervalId = setInterval(rotateimages, 500);
 })
 </script>
 
